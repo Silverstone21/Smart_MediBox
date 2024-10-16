@@ -1,0 +1,852 @@
+[
+    {
+        "id": "6ad9c311695e0d6d",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "fd54e9937ab59f97",
+        "type": "ui_group",
+        "name": "Temperature",
+        "tab": "f873105550da5a1e",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f7c0c925f5d18205",
+        "type": "ui_group",
+        "name": "Light Intensity",
+        "tab": "f873105550da5a1e",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "886634c981cb82c1",
+        "type": "ui_group",
+        "name": "Servo Control",
+        "tab": "f873105550da5a1e",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f873105550da5a1e",
+        "type": "ui_tab",
+        "name": "MediBox",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "88760ce5d16a51fb",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "test.mosquitto.org",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "7de4526d2386d43a",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "83effdc4baeacd52",
+        "type": "mqtt in",
+        "z": "6ad9c311695e0d6d",
+        "name": "",
+        "topic": "Temperature",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "88760ce5d16a51fb",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 80,
+        "wires": [
+            [
+                "2f6d12c09665b964"
+            ]
+        ]
+    },
+    {
+        "id": "2f6d12c09665b964",
+        "type": "delay",
+        "z": "6ad9c311695e0d6d",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "2",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 320,
+        "y": 80,
+        "wires": [
+            [
+                "38cad1ba161ae2d9"
+            ]
+        ]
+    },
+    {
+        "id": "38cad1ba161ae2d9",
+        "type": "function",
+        "z": "6ad9c311695e0d6d",
+        "name": "TemperatureData",
+        "func": "return {\n    payload: msg.payload,\n    topic: \"Temperature\"\n};",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 80,
+        "wires": [
+            [
+                "5b883418069dea8d",
+                "b1048b6162bf7219"
+            ]
+        ]
+    },
+    {
+        "id": "5b883418069dea8d",
+        "type": "ui_chart",
+        "z": "6ad9c311695e0d6d",
+        "name": "",
+        "group": "fd54e9937ab59f97",
+        "order": 15,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature Variation",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 800,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b1048b6162bf7219",
+        "type": "ui_gauge",
+        "z": "6ad9c311695e0d6d",
+        "name": "",
+        "group": "fd54e9937ab59f97",
+        "order": 16,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "-20",
+        "max": "80",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 770,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "e776c1f2bd0752ad",
+        "type": "mqtt in",
+        "z": "6ad9c311695e0d6d",
+        "name": "",
+        "topic": "LDR_Left",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "88760ce5d16a51fb",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 240,
+        "wires": [
+            [
+                "0825bfb99f72b561"
+            ]
+        ]
+    },
+    {
+        "id": "0825bfb99f72b561",
+        "type": "delay",
+        "z": "6ad9c311695e0d6d",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "2",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 320,
+        "y": 240,
+        "wires": [
+            [
+                "3c85d74012686ac8"
+            ]
+        ]
+    },
+    {
+        "id": "3c85d74012686ac8",
+        "type": "function",
+        "z": "6ad9c311695e0d6d",
+        "name": "L_LDR_Data",
+        "func": "return {\n    payload: msg.payload,\n    topic: \"Left\"\n};",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 240,
+        "wires": [
+            [
+                "49eb2a048bcb3f9d",
+                "f213cfaac578ceb2"
+            ]
+        ]
+    },
+    {
+        "id": "02d361b3d0a454db",
+        "type": "mqtt in",
+        "z": "6ad9c311695e0d6d",
+        "name": "",
+        "topic": "LDR_Right",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "88760ce5d16a51fb",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 340,
+        "wires": [
+            [
+                "296a9826c1413b60"
+            ]
+        ]
+    },
+    {
+        "id": "296a9826c1413b60",
+        "type": "delay",
+        "z": "6ad9c311695e0d6d",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "2",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 320,
+        "y": 340,
+        "wires": [
+            [
+                "83c931d637350d3c"
+            ]
+        ]
+    },
+    {
+        "id": "83c931d637350d3c",
+        "type": "function",
+        "z": "6ad9c311695e0d6d",
+        "name": "R_LDR_Data",
+        "func": "return {\n    payload: msg.payload,\n    topic: \"Right\"\n};",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 340,
+        "wires": [
+            [
+                "49eb2a048bcb3f9d",
+                "96cb1ae26a2c06d8"
+            ]
+        ]
+    },
+    {
+        "id": "49eb2a048bcb3f9d",
+        "type": "ui_chart",
+        "z": "6ad9c311695e0d6d",
+        "name": "",
+        "group": "f7c0c925f5d18205",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "label": "LDR Intensity",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 720,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f213cfaac578ceb2",
+        "type": "change",
+        "z": "6ad9c311695e0d6d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "L_ldr",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 720,
+        "y": 240,
+        "wires": [
+            [
+                "9f5193b360ea5e4f"
+            ]
+        ]
+    },
+    {
+        "id": "96cb1ae26a2c06d8",
+        "type": "change",
+        "z": "6ad9c311695e0d6d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "R_ldr",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 720,
+        "y": 340,
+        "wires": [
+            [
+                "9f5193b360ea5e4f"
+            ]
+        ]
+    },
+    {
+        "id": "9f5193b360ea5e4f",
+        "type": "function",
+        "z": "6ad9c311695e0d6d",
+        "name": "Max Intensity",
+        "func": "let R_ldr = global.get(\"R_ldr\");\nlet L_ldr = global.get(\"L_ldr\");\nlet max=R_ldr;\nif (L_ldr>R_ldr){\n    max = L_ldr;\n}\nreturn {\n    payload:max\n};",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 280,
+        "wires": [
+            [
+                "29372a48914a10f4"
+            ]
+        ]
+    },
+    {
+        "id": "29372a48914a10f4",
+        "type": "ui_gauge",
+        "z": "6ad9c311695e0d6d",
+        "name": "",
+        "group": "f7c0c925f5d18205",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Max Intensity",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1070,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "2a058110308a75d5",
+        "type": "ui_dropdown",
+        "z": "6ad9c311695e0d6d",
+        "name": "",
+        "label": "Presets",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "886634c981cb82c1",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Default",
+                "value": "Default",
+                "type": "str"
+            },
+            {
+                "label": "Medicine_type1",
+                "value": "Medicine_type1",
+                "type": "str"
+            },
+            {
+                "label": "Medicine_type2",
+                "value": "Medicine_type2",
+                "type": "str"
+            },
+            {
+                "label": "Medicine_type3",
+                "value": "Medicine_type3",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 120,
+        "y": 540,
+        "wires": [
+            [
+                "c95b9fbf0c98dc6b",
+                "7473b51cfd02166a"
+            ]
+        ]
+    },
+    {
+        "id": "c95b9fbf0c98dc6b",
+        "type": "function",
+        "z": "6ad9c311695e0d6d",
+        "name": "PresetsFunction_CF",
+        "func": "if (msg.payload == \"Medicine_type1\"){\n    return {payload:0.25}\n}else if (msg.payload = \"Medicine_type2\") {\n    return { payload: 0.5 }\n}else if (msg.payload = \"Medicine_type3\") {\n    return { payload: 1.5 }\n}else{\n    return { payload: 0.75 }\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 520,
+        "wires": [
+            [
+                "a8f2f969458e7b0e"
+            ]
+        ]
+    },
+    {
+        "id": "7473b51cfd02166a",
+        "type": "function",
+        "z": "6ad9c311695e0d6d",
+        "name": "PresetsFunction_MinAngle",
+        "func": "if (msg.payload == \"Medicine_type1\") {\n    return { payload: 45 }\n} else if (msg.payload = \"Medicine_type2\") {\n    return { payload: 90 }\n} else if (msg.payload = \"Medicine_type3\") {\n    return { payload: 60 }\n} else {\n    return { payload: 30 }\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 580,
+        "wires": [
+            [
+                "01f1abf6bf90362c"
+            ]
+        ]
+    },
+    {
+        "id": "a8f2f969458e7b0e",
+        "type": "ui_slider",
+        "z": "6ad9c311695e0d6d",
+        "name": "",
+        "label": "Controlling Factor",
+        "tooltip": "",
+        "group": "886634c981cb82c1",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "2",
+        "step": "0.5",
+        "className": "",
+        "x": 570,
+        "y": 520,
+        "wires": [
+            [
+                "832ecad942976864"
+            ]
+        ]
+    },
+    {
+        "id": "01f1abf6bf90362c",
+        "type": "ui_slider",
+        "z": "6ad9c311695e0d6d",
+        "name": "",
+        "label": "Minimum Angle",
+        "tooltip": "",
+        "group": "886634c981cb82c1",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "30",
+        "max": "120",
+        "step": "15",
+        "className": "",
+        "x": 560,
+        "y": 580,
+        "wires": [
+            [
+                "08ca25410318017f"
+            ]
+        ]
+    },
+    {
+        "id": "832ecad942976864",
+        "type": "mqtt out",
+        "z": "6ad9c311695e0d6d",
+        "name": "",
+        "topic": "CONTROLLING_FACTOR_SERVO",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "88760ce5d16a51fb",
+        "x": 840,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "08ca25410318017f",
+        "type": "mqtt out",
+        "z": "6ad9c311695e0d6d",
+        "name": "",
+        "topic": "MIN_ANGLE_SERVO",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "88760ce5d16a51fb",
+        "x": 800,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "620f097a4c1b3feb",
+        "type": "mqtt in",
+        "z": "6ad9c311695e0d6d",
+        "name": "",
+        "topic": "Motor_Angle_Servo",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "88760ce5d16a51fb",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 640,
+        "wires": [
+            [
+                "cd93e6fa7bfd60e7"
+            ]
+        ]
+    },
+    {
+        "id": "61e61be6c3ce7e3c",
+        "type": "ui_gauge",
+        "z": "6ad9c311695e0d6d",
+        "name": "",
+        "group": "886634c981cb82c1",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Servo Angle",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "180",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 570,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "cd93e6fa7bfd60e7",
+        "type": "delay",
+        "z": "6ad9c311695e0d6d",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "2",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 360,
+        "y": 640,
+        "wires": [
+            [
+                "61e61be6c3ce7e3c"
+            ]
+        ]
+    }
+]
